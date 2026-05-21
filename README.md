@@ -1,31 +1,131 @@
-<h3 align="center">
-  <pre>
- ██████╗ ██╗     ██╗████████╗ ██████╗██╗  ██╗██████╗  ██████╗ ██╗
-██╔════╝ ██║     ██║╚══██╔══╝██╔════╝██║  ██║██╔══██╗██╔═══██╗██║
-██║  ███╗██║     ██║   ██║   ██║     ███████║██████╔╝██║   ██║██║
-██║   ██║██║     ██║   ██║   ██║     ██╔══██║██╔══██╗██║   ██║██║
-╚██████╔╝███████╗██║   ██║   ╚██████╗██║  ██║██████╔╝╚██████╔╝██║
- ╚═════╝ ╚══════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝
-  </pre>
-</h3>
-<h3 align="center">Security from México to all</h3>
-
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=plastic&logo=Raspberry-Pi) ![Open Source Hardware](https://img.shields.io/badge/-Open_Source_Hardware-%2300599C?style=plastic&logo=Open-Source-Hardware)
-
-## 🏴‍☠️ ¿Quiénes somos?
-Hacemos **hardware libre para ciberseguridad y pentest** porque **romper es la mejor forma de fortalecer**.
-
-✅ **Open Source 100%**: compartimos firmwares, bibliotecas y pronto documentación completa.  
-✅ **Creado por y para la comunidad**: estudiantes, profesionales y curiosos de la seguridad.  
-✅ **Romper para aprender, aprender para proteger**.
-
-## 🌎 Filosofía
-> **"No es para criminales. Es para que los buenos estén un paso adelante."**  
-Si las vulnerabilidades se conocen, se corrigen. Si se corrigen, lo que producimos deja de ser efectivo.  
-Y eso, amigos, es **la victoria definitiva**.
----
+<!-- HEADER -->
+<p align="center">
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDkwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwYTBlMGIiLz4KCiAgPCEtLSBDaXJjdWl0IGdyaWQgbGluZXMgLS0+CiAgPGcgc3Ryb2tlPSIjMGYxZjE0IiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGxpbmUgeDE9IjAiIHkxPSI0MCIgeDI9IjkwMCIgeTI9IjQwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjgwIiB4Mj0iOTAwIiB5Mj0iODAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMTIwIiB4Mj0iOTAwIiB5Mj0iMTIwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE2MCIgeDI9IjkwMCIgeTI9IjE2MCIvPgogICAgPGxpbmUgeDE9IjEwMCIgeTE9IjAiIHgyPSIxMDAiIHkyPSIyMDAiLz4KICAgIDxsaW5lIHgxPSIyMDAiIHkxPSIwIiB4Mj0iMjAwIiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iMzAwIiB5MT0iMCIgeDI9IjMwMCIgeTI9IjIwMCIvPgogICAgPGxpbmUgeDE9IjQwMCIgeTE9IjAiIHgyPSI0MDAiIHkyPSIyMDAiLz4KICAgIDxsaW5lIHgxPSI1MDAiIHkxPSIwIiB4Mj0iNTAwIiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iNjAwIiB5MT0iMCIgeDI9IjYwMCIgeTI9IjIwMCIvPgogICAgPGxpbmUgeDE9IjcwMCIgeTE9IjAiIHgyPSI3MDAiIHkyPSIyMDAiLz4KICAgIDxsaW5lIHgxPSI4MDAiIHkxPSIwIiB4Mj0iODAwIiB5Mj0iMjAwIi8+CiAgPC9nPgoKICA8IS0tIENpcmN1aXQgdHJhY2VzIC0tPgogIDxnIHN0cm9rZT0iIzFhMzMyMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiPgogICAgPHBvbHlsaW5lIHBvaW50cz0iMCw2MCAxNDAsNjAgMTQwLDEwMCAyNjAsMTAwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSIyNjAsMTAwIDI2MCwxNDAgNDIwLDE0MCA0MjAsNjAgNTgwLDYwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSI1ODAsNjAgNTgwLDEwMCA3MjAsMTAwIDcyMCw0MCA5MDAsNDAiLz4KICAgIDxwb2x5bGluZSBwb2ludHM9IjAsMTQwIDgwLDE0MCA4MCwxODAgMjIwLDE4MCIvPgogICAgPHBvbHlsaW5lIHBvaW50cz0iMjIwLDE4MCAyMjAsMTIwIDM4MCwxMjAgMzgwLDE2MCA1NDAsMTYwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSI1NDAsMTYwIDU0MCw4MCA2ODAsODAgNjgwLDE0MCA5MDAsMTQwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSI5MDAsODAgODIwLDgwIDgyMCwyMCA2NjAsMjAgNjYwLDYwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSIwLDIwIDYwLDIwIDYwLDEwMCIvPgogIDwvZz4KCiAgPCEtLSBTb2xkZXIgcG9pbnRzIC0tPgogIDxnIGZpbGw9IiMxYTMzMjIiPgogICAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iNjAiIHI9IjMiLz48Y2lyY2xlIGN4PSIxNDAiIGN5PSIxMDAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjI2MCIgY3k9IjEwMCIgcj0iMyIvPjxjaXJjbGUgY3g9IjI2MCIgY3k9IjE0MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iNDIwIiBjeT0iMTQwIiByPSIzIi8+PGNpcmNsZSBjeD0iNDIwIiBjeT0iNjAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjU4MCIgY3k9IjYwIiByPSIzIi8+PGNpcmNsZSBjeD0iNTgwIiBjeT0iMTAwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI3MjAiIGN5PSIxMDAiIHI9IjMiLz48Y2lyY2xlIGN4PSI3MjAiIGN5PSI0MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iODAiIGN5PSIxNDAiIHI9IjMiLz48Y2lyY2xlIGN4PSI4MCIgY3k9IjE4MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iMjIwIiBjeT0iMTgwIiByPSIzIi8+PGNpcmNsZSBjeD0iMjIwIiBjeT0iMTIwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIzODAiIGN5PSIxMjAiIHI9IjMiLz48Y2lyY2xlIGN4PSIzODAiIGN5PSIxNjAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjU0MCIgY3k9IjE2MCIgcj0iMyIvPjxjaXJjbGUgY3g9IjU0MCIgY3k9IjgwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI2ODAiIGN5PSI4MCIgcj0iMyIvPjxjaXJjbGUgY3g9IjY4MCIgY3k9IjE0MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iODIwIiBjeT0iODAiIHI9IjMiLz48Y2lyY2xlIGN4PSI4MjAiIGN5PSIyMCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iNjYwIiBjeT0iMjAiIHI9IjMiLz48Y2lyY2xlIGN4PSI2NjAiIGN5PSI2MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iNjAiIGN5PSIyMCIgcj0iMyIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iMTAwIiByPSIzIi8+CiAgPC9nPgoKICA8IS0tIEdsaXRjaCBob3Jpem9udGFsIHRlYXJzIC0tPgogIDxyZWN0IHg9IjAiIHk9IjMyIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjQiIGZpbGw9IiMwYTBlMGIiIG9wYWNpdHk9IjAuOSIvPgogIDxyZWN0IHg9IjAiIHk9IjMzIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMGZmOWYiIG9wYWNpdHk9IjAuMDciLz4KICA8cmVjdCB4PSI2MjAiIHk9Ijg4IiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMiIGZpbGw9IiNmZjNiM2IiIG9wYWNpdHk9IjAuMDgiLz4KICA8cmVjdCB4PSIwIiB5PSI4OCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjMiIGZpbGw9IiMwMGZmOWYiIG9wYWNpdHk9IjAuMDUiLz4KICA8cmVjdCB4PSIzNTAiIHk9IjE1MiIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyIiBmaWxsPSIjZmY2YjJiIiBvcGFjaXR5PSIwLjA2Ii8+CiAgPHJlY3QgeD0iNzUwIiB5PSIxMTIiIHdpZHRoPSIxMjAiIGhlaWdodD0iNCIgZmlsbD0iIzBhMGUwYiIgb3BhY2l0eT0iMC45NSIvPgogIDxyZWN0IHg9Ijc1MCIgeT0iMTEzIiB3aWR0aD0iODAiIGhlaWdodD0iMiIgZmlsbD0iIzAwY2NmZiIgb3BhY2l0eT0iMC4wNiIvPgoKICA8IS0tIE1haW4gY2hpcCBib2R5IC0tPgogIDxyZWN0IHg9IjMxMCIgeT0iNTIiIHdpZHRoPSIyODAiIGhlaWdodD0iOTYiIGZpbGw9IiMwZDFhMTAiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHJ4PSIyIi8+CiAgPCEtLSBjaGlwIHBpbnMgdG9wIC0tPgogIDxsaW5lIHgxPSIzNjAiIHkxPSI0MCIgeDI9IjM2MCIgeTI9IjUyIiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjQwMCIgeTE9IjQwIiB4Mj0iNDAwIiB5Mj0iNTIiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNDQwIiB5MT0iNDAiIHgyPSI0NDAiIHkyPSI1MiIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI0ODAiIHkxPSI0MCIgeDI9IjQ4MCIgeTI9IjUyIiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjUyMCIgeTE9IjQwIiB4Mj0iNTIwIiB5Mj0iNTIiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNTYwIiB5MT0iNDAiIHgyPSI1NjAiIHkyPSI1MiIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gY2hpcCBwaW5zIGJvdHRvbSAtLT4KICA8bGluZSB4MT0iMzYwIiB5MT0iMTQ4IiB4Mj0iMzYwIiB5Mj0iMTYwIiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjQwMCIgeTE9IjE0OCIgeDI9IjQwMCIgeTI9IjE2MCIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI0NDAiIHkxPSIxNDgiIHgyPSI0NDAiIHkyPSIxNjAiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNDgwIiB5MT0iMTQ4IiB4Mj0iNDgwIiB5Mj0iMTYwIiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjUyMCIgeTE9IjE0OCIgeDI9IjUyMCIgeTI9IjE2MCIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI1NjAiIHkxPSIxNDgiIHgyPSI1NjAiIHkyPSIxNjAiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIGNoaXAgcGlucyBsZWZ0IC0tPgogIDxsaW5lIHgxPSIyOTgiIHkxPSI3NSIgeDI9IjMxMCIgeTI9Ijc1IiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjI5OCIgeTE9IjEwMCIgeDI9IjMxMCIgeTI9IjEwMCIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSIyOTgiIHkxPSIxMjUiIHgyPSIzMTAiIHkyPSIxMjUiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIGNoaXAgcGlucyByaWdodCAtLT4KICA8bGluZSB4MT0iNTkwIiB5MT0iNzUiIHgyPSI2MDIiIHkyPSI3NSIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI1OTAiIHkxPSIxMDAiIHgyPSI2MDIiIHkyPSIxMDAiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNTkwIiB5MT0iMTI1IiB4Mj0iNjAyIiB5Mj0iMTI1IiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41Ii8+CgogIDwhLS0gR0xJVENIQk9JIG1haW4gdGV4dCAtLT4KICA8dGV4dCB4PSI0NTAiIHk9IjEwNCIgZm9udC1mYW1pbHk9IidDb3VyaWVyIE5ldycsbW9ub3NwYWNlIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwMGZmOWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI2Ij5HTElUQ0hCT0k8L3RleHQ+CiAgPCEtLSBSR0IgY2hyb21hdGljIGFiZXJyYXRpb24gb2Zmc2V0cyAtLT4KICA8dGV4dCB4PSI0NTQiIHk9IjEwNCIgZm9udC1mYW1pbHk9IidDb3VyaWVyIE5ldycsbW9ub3NwYWNlIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiNmZjNiM2IiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI2IiBvcGFjaXR5PSIwLjMiPkdMSVRDSEJPSTwvdGV4dD4KICA8dGV4dCB4PSI0NDYiIHk9IjEwNCIgZm9udC1mYW1pbHk9IidDb3VyaWVyIE5ldycsbW9ub3NwYWNlIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiMwMGNjZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI2IiBvcGFjaXR5PSIwLjIiPkdMSVRDSEJPSTwvdGV4dD4KCiAgPCEtLSBHbGl0Y2ggc2xpY2Ugb24gdGV4dCDigJQgY29ycnVwdGVkIGJsb2NrIC0tPgogIDxyZWN0IHg9IjMxMCIgeT0iODQiIHdpZHRoPSIyODAiIGhlaWdodD0iOCIgZmlsbD0iIzBkMWExMCIvPgogIDx0ZXh0IHg9IjQ1MCIgeT0iOTEiIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLG1vbm9zcGFjZSIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9IjcwMCIKICAgICAgICBmaWxsPSIjMDBmZjlmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNiIgb3BhY2l0eT0iMC40Ij5HTElUQ0hCT0k8L3RleHQ+CiAgPHRleHQgeD0iNDU4IiB5PSI5MSIgZm9udC1mYW1pbHk9IidDb3VyaWVyIE5ldycsbW9ub3NwYWNlIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIgogICAgICAgIGZpbGw9IiNmZjNiM2IiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSI2IiBvcGFjaXR5PSIwLjI1Ij5HTElUQ0hCT0k8L3RleHQ+CgogIDwhLS0gc3VidGl0bGUgLS0+CiAgPHRleHQgeD0iNDUwIiB5PSIxMzQiIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLG1vbm9zcGFjZSIgZm9udC1zaXplPSIxMSIKICAgICAgICBmaWxsPSIjNGE2YjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+SEFSRFdBUkUgSEFDS0VSIMK3IFBFTlRFU1RFUiDCtyBNQUtFUjwvdGV4dD4KCiAgPCEtLSBDb3JuZXIgYnJhY2tldHMgcHVuayBzdHlsZSAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIyMCwxNSAyMCw1IDMwLDUiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8cG9seWxpbmUgcG9pbnRzPSI4NzAsNSA4ODAsNSA4ODAsMTUiIHN0cm9rZT0iIzAwY2M3YSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8cG9seWxpbmUgcG9pbnRzPSIyMCwxODUgMjAsMTk1IDMwLDE5NSIgc3Ryb2tlPSIjMDBjYzdhIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIvPgogIDxwb2x5bGluZSBwb2ludHM9Ijg3MCwxOTUgODgwLDE5NSA4ODAsMTg1IiBzdHJva2U9IiMwMGNjN2EiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CgogIDwhLS0gU2NhbmxpbmVzIG92ZXJsYXkgLS0+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9InVybCgjc2NhbikiIG9wYWNpdHk9IjAuMTUiLz4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJzY2FuIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSI0IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzAwMDAwMCIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KCiAgPCEtLSBBY3RpdmUgZ2xvdyBkb3RzIC0tPgogIDxjaXJjbGUgY3g9IjE0MCIgY3k9IjYwIiByPSI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmOWYiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNzIwIiBjeT0iNDAiIHI9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmNmIyYiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSI1NDAiIGN5PSI4MCIgcj0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBmZjlmIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjM4MCIgY3k9IjEyMCIgcj0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYzYjNiIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNSIvPgoKICA8IS0tIEJvdHRvbSBzdGF0dXMgYmFyIC0tPgogIDxyZWN0IHg9IjAiIHk9IjE5MCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzA2MGIwNyIvPgogIDxyZWN0IHg9IjAiIHk9IjE5MCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxIiBmaWxsPSIjMDBjYzdhIiBvcGFjaXR5PSIwLjQiLz4KICA8dGV4dCB4PSIyMCIgeT0iMTk4IiBmb250LWZhbWlseT0iJ0NvdXJpZXIgTmV3Jyxtb25vc3BhY2UiIGZvbnQtc2l6ZT0iNyIKICAgICAgICBmaWxsPSIjMWEzMzIyIiBsZXR0ZXItc3BhY2luZz0iMiI+U1lTOk9LIMK3IEZXOjEuMy43IMK3IFBJUEE6Q0VSVElGSUVEIMK3IE1YPC90ZXh0PgogIDxyZWN0IHg9Ijg2MCIgeT0iMTkyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSIjMDBmZjlmIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI4NzAiIHk9IjE5MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2ZmNmIyYiIgb3BhY2l0eT0iMC41Ii8+CiAgPHJlY3QgeD0iODgwIiB5PSIxOTIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9IiMxYTMzMjIiLz4KPC9zdmc+" width="100%" alt="Glitchboi Header"/>
+</p>
 
 <p align="center">
-  <i>🔥 Hardware libre desde México para todo el mundo 🔥</i><br>
-  <i>"Romper para fortalecer"</i>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=Glitchboi-sudo.Glitchboi-sudo&left_color=0d1410&right_color=00cc7a&left_text=visitors" />
+  <img src="https://img.shields.io/badge/PIPA_Certified-00cc7a?style=flat-square&logo=hackthebox&logoColor=0d1410" />
+  <img src="https://img.shields.io/badge/Open_Source-everything-ff6b2b?style=flat-square&logo=opensourceinitiative&logoColor=white" />
+</p>
+
+---
+
+> *"La imaginación es más importante que el conocimiento. El conocimiento es limitado, la imaginación delimita al mundo."*
+> — Albert Einstein
+
+---
+
+## `// About`
+
+Pentester by day. Hardware hacker by conviction.
+I break things to understand them — then I make them better, or build something new.
+If I bought it, I own it completely.
+
+**Pentester de día. Hacedor de hardware por convicción.**
+Rompo las cosas para entenderlas — después las mejoro, o construyo algo nuevo.
+Si lo compré, lo controlo. El hardware libre no es opcional, es una postura.
+
+---
+
+## `// Stack`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
+  <img src="https://img.shields.io/badge/RP2040-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white"/>
+</p>
+
+<p align="left">
+  <img src="https://img.shields.io/badge/IoT_Pentest-ff6b2b?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Hardware_Hacking-ff6b2b?style=flat-square"/>
+  <img src="https://img.shields.io/badge/PCB_Design-00cc7a?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Firmware-00cc7a?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Anti--DRM-ff3b3b?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Punk_Ethics-4a6b52?style=flat-square"/>
+</p>
+
+---
+
+## `// GitHub Stats`
+
+<p align="center">
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Glitchboi-sudo&show_icons=true&theme=merko&hide_border=true&bg_color=0d1410&title_color=00ff9f&icon_color=ff6b2b&text_color=b8d4bf&ring_color=00cc7a" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Glitchboi-sudo&layout=compact&theme=merko&hide_border=true&bg_color=0d1410&title_color=00ff9f&text_color=b8d4bf" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Glitchboi-sudo&theme=merko&hide_border=true&background=0D1410&ring=00FF9F&fire=FF6B2B&currStreakLabel=00CC7A&sideLabels=4A6B52&dates=4A6B52&stroke=1A2E1E" />
+</p>
+
+---
+
+## `// Projects`
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Cerberus</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/RP2040-C51A4A?style=flat-square&logo=raspberry-pi&logoColor=white"/>
+        <img src="https://img.shields.io/badge/USB_Security-00cc7a?style=flat-square"/>
+      </p>
+      <p>USB watchdog built on Pico. Detects malicious USB devices before they reach the host. Extension of USBvalve.</p>
+      <p align="center">
+        <a href="https://github.com/Glitchboi-sudo/cerberus-a-usb-watchdog">
+          <img src="https://img.shields.io/badge/View_Repo-0d1410?style=for-the-badge&logo=github&logoColor=00ff9f"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">ESP32-PirateBus</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white"/>
+        <img src="https://img.shields.io/badge/NFC_·_RF_·_ETH-00cc7a?style=flat-square"/>
+      </p>
+      <p>Custom PCB expanding Bus Pirate with NFC, Ethernet, Sub-GHz and 2.4GHz — all in one security research kit.</p>
+      <p align="center">
+        <a href="https://github.com/Glitchboi-sudo/esp32-piratebus-kit">
+          <img src="https://img.shields.io/badge/View_Repo-0d1410?style=for-the-badge&logo=github&logoColor=00ff9f"/>
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Blackwire</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54"/>
+        <img src="https://img.shields.io/badge/HTTP/HTTPS_Proxy-ff6b2b?style=flat-square"/>
+      </p>
+      <p>Open source intercepting proxy. Lightweight alternative to Burp Suite — portable, extensible, yours.</p>
+      <p align="center">
+        <a href="https://github.com/Glitchboi-sudo/blackwire">
+          <img src="https://img.shields.io/badge/View_Repo-0d1410?style=for-the-badge&logo=github&logoColor=00ff9f"/>
+        </a>
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">HackPlate</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/DIY-00cc7a?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Open_Hardware-ff6b2b?style=flat-square&logo=open-source-initiative&logoColor=white"/>
+      </p>
+      <p>Open source preheating station. Built with accessible microcontrollers — because soldering tools should be hackable too.</p>
+      <p align="center">
+        <a href="https://github.com/Glitchboi-sudo/hackplate">
+          <img src="https://img.shields.io/badge/View_Repo-0d1410?style=for-the-badge&logo=github&logoColor=00ff9f"/>
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+<!-- FOOTER -->
+<p align="center">
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgOTAwIDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iODAiIGZpbGw9IiMwYTBlMGIiLz4KCiAgPCEtLSBUb3Agc2VwYXJhdG9yIGxpbmUgLS0+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxIiBmaWxsPSIjMDBjYzdhIiBvcGFjaXR5PSIwLjUiLz4KCiAgPCEtLSBDaXJjdWl0IHRyYWNlcyBmb290ZXIgLS0+CiAgPGcgc3Ryb2tlPSIjMGYxZjE0IiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGxpbmUgeDE9IjAiIHkxPSIyMCIgeDI9IjkwMCIgeTI9IjIwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjQwIiB4Mj0iOTAwIiB5Mj0iNDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNjAiIHgyPSI5MDAiIHkyPSI2MCIvPgogIDwvZz4KICA8ZyBzdHJva2U9IiMxYTMzMjIiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIj4KICAgIDxwb2x5bGluZSBwb2ludHM9IjAsMzAgMTIwLDMwIDEyMCwxMCAyODAsMTAiLz4KICAgIDxwb2x5bGluZSBwb2ludHM9IjI4MCwxMCAyODAsNTAgNDQwLDUwIDQ0MCwyMCA2MDAsMjAiLz4KICAgIDxwb2x5bGluZSBwb2ludHM9IjYwMCwyMCA2MDAsNTAgNzQwLDUwIDc0MCwxMCA5MDAsMTAiLz4KICAgIDxwb2x5bGluZSBwb2ludHM9IjAsNTAgODAsNTAgODAsNzAgMjAwLDcwIi8+CiAgICA8cG9seWxpbmUgcG9pbnRzPSI3MDAsNzAgODIwLDcwIDgyMCwzMCA5MDAsMzAiLz4KICA8L2c+CgogIDwhLS0gU29sZGVyIHBvaW50cyAtLT4KICA8ZyBmaWxsPSIjMWEzMzIyIj4KICAgIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjMwIiByPSIyLjUiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSIxMCIgcj0iMi41Ii8+CiAgICA8Y2lyY2xlIGN4PSIyODAiIGN5PSIxMCIgcj0iMi41Ii8+PGNpcmNsZSBjeD0iMjgwIiBjeT0iNTAiIHI9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iNDQwIiBjeT0iNTAiIHI9IjIuNSIvPjxjaXJjbGUgY3g9IjQ0MCIgY3k9IjIwIiByPSIyLjUiLz4KICAgIDxjaXJjbGUgY3g9IjYwMCIgY3k9IjIwIiByPSIyLjUiLz48Y2lyY2xlIGN4PSI2MDAiIGN5PSI1MCIgcj0iMi41Ii8+CiAgICA8Y2lyY2xlIGN4PSI3NDAiIGN5PSI1MCIgcj0iMi41Ii8+PGNpcmNsZSBjeD0iNzQwIiBjeT0iMTAiIHI9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MCIgcj0iMi41Ii8+PGNpcmNsZSBjeD0iODAiIGN5PSI3MCIgcj0iMi41Ii8+CiAgICA8Y2lyY2xlIGN4PSI4MjAiIGN5PSI3MCIgcj0iMi41Ii8+PGNpcmNsZSBjeD0iODIwIiBjeT0iMzAiIHI9IjIuNSIvPgogIDwvZz4KCiAgPCEtLSBHbGl0Y2ggdGVhcnMgLS0+CiAgPHJlY3QgeD0iMTUwIiB5PSIxNyIgd2lkdGg9IjkwIiBoZWlnaHQ9IjMiIGZpbGw9IiMwMGZmOWYiIG9wYWNpdHk9IjAuMDYiLz4KICA8cmVjdCB4PSI1MDAiIHk9IjM3IiB3aWR0aD0iNjAiIGhlaWdodD0iMiIgZmlsbD0iI2ZmM2IzYiIgb3BhY2l0eT0iMC4wNyIvPgogIDxyZWN0IHg9IjcwMCIgeT0iNTciIHdpZHRoPSIxMDAiIGhlaWdodD0iMyIgZmlsbD0iIzAwY2NmZiIgb3BhY2l0eT0iMC4wNSIvPgoKICA8IS0tIENlbnRlciB0ZXh0IC0tPgogIDx0ZXh0IHg9IjQ1MCIgeT0iNDciIGZvbnQtZmFtaWx5PSInQ291cmllciBOZXcnLG1vbm9zcGFjZSIgZm9udC1zaXplPSIxMSIKICAgICAgICBmaWxsPSIjMDBmZjlmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMyIgb3BhY2l0eT0iMC44Ij5NRVhJQ08gwrcgT1BFTiBTT1VSQ0UgwrcgQlJFQUsgVE8gU1RSRU5HVEhFTjwvdGV4dD4KICA8IS0tIGdob3N0IG9mZnNldCAtLT4KICA8dGV4dCB4PSI0NTIiIHk9IjQ3IiBmb250LWZhbWlseT0iJ0NvdXJpZXIgTmV3Jyxtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTEiCiAgICAgICAgZmlsbD0iI2ZmM2IzYiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiIG9wYWNpdHk9IjAuMTUiPk1FWElDTyDCtyBPUEVOIFNPVVJDRSDCtyBCUkVBSyBUTyBTVFJFTkdUSEVOPC90ZXh0PgoKICA8IS0tIENvcm5lciBicmFja2V0cyAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIxMCw1IDEwLDE1IDIwLDE1IiBzdHJva2U9IiMxYTMzMjIiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBvbHlsaW5lIHBvaW50cz0iODgwLDUgODkwLDUgODkwLDE1IiBzdHJva2U9IiMxYTMzMjIiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CgogIDwhLS0gU3RhdHVzIExFRHMgYm90dG9tIHJpZ2h0IC0tPgogIDxjaXJjbGUgY3g9Ijg0MCIgY3k9IjY1IiByPSIzIiBmaWxsPSIjMDBmZjlmIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSI4NTIiIGN5PSI2NSIgcj0iMyIgZmlsbD0iI2ZmNmIyYiIgb3BhY2l0eT0iMC41Ii8+CiAgPGNpcmNsZSBjeD0iODY0IiBjeT0iNjUiIHI9IjMiIGZpbGw9IiMxYTMzMjIiLz4KCiAgPCEtLSBCb3R0b20gc2NhbmxpbmUgYmFyIC0tPgogIDxyZWN0IHg9IjAiIHk9IjcwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMDYwYjA3Ii8+CiAgPHRleHQgeD0iMjAiIHk9Ijc4IiBmb250LWZhbWlseT0iJ0NvdXJpZXIgTmV3Jyxtb25vc3BhY2UiIGZvbnQtc2l6ZT0iNyIKICAgICAgICBmaWxsPSIjMWEzMzIyIiBsZXR0ZXItc3BhY2luZz0iMiI+fi9nbGl0Y2hib2ktc3VkbyAkIGVjaG8gInJvbXBlciBwYXJhIGZvcnRhbGVjZXIiXzwvdGV4dD4KPC9zdmc+" width="100%" alt="Glitchboi Footer"/>
 </p>
