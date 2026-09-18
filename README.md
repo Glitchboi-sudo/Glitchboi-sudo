@@ -101,14 +101,14 @@ Si lo compré, lo controlo. El hardware libre no es opcional, es una postura.
       </p>
     </td>
     <td width="50%">
-      <h3 align="center">HackPlate</h3>
+      <h3 align="center">Bellum Tool</h3>
       <p align="center">
         <img src="https://img.shields.io/badge/DIY-00cc7a?style=flat-square"/>
         <img src="https://img.shields.io/badge/Open_Hardware-ff6b2b?style=flat-square&logo=open-source-initiative&logoColor=white"/>
       </p>
-      <p>Open source preheating station. Built with accessible microcontrollers — because soldering tools should be hackable too.</p>
+      <p>Open source alternative for PayDroid Tool to manage PAX PayDroid point-of-sale terminals over ADB.</p>
       <p align="center">
-        <a href="https://github.com/Glitchboi-sudo/hackplate">
+        <a href="https://github.com/Glitchboi-sudo/Bellum-Tool">
           <img src="https://img.shields.io/badge/View_Repo-0d1410?style=for-the-badge&logo=github&logoColor=00ff9f"/>
         </a>
       </p>
